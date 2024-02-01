@@ -7,6 +7,7 @@
 import Foundation
 import Alamofire
 
+
 enum DataError: Error {
     case invalidResponse
     case invalidURL
