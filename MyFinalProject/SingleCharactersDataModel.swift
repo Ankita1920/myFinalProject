@@ -10,7 +10,7 @@ import Foundation
 // MARK: - SingleCharactersDataModel
 struct SingleCharactersDataModel: Codable {
     let id: Int
-    let name, status, species, type: String
+   let name, status, species, type: String
     let gender: String
     let origin, location: LocationForSingleCharacters
     let image: String

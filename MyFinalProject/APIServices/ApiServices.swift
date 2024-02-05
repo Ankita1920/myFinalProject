@@ -3,10 +3,8 @@
 //  Ricky and Morty project
 //
 //  Created by Ankita Mondal on 30/01/24.
-//
 import Foundation
 import Alamofire
-
 
 enum DataError: Error {
     case invalidResponse
@@ -22,21 +20,21 @@ enum APIResult<T> {
 
 final class APIManager {
     static let shared = APIManager()
-    private init() {}
-
-    func fetchSingleCharacterData(completion: @escaping (APIResult<[SingleCharactersDataModel]>) -> Void) {
-        AF.request("https://rickandmortyapi.com/api/character",
-                   method: .get,
-                   parameters: nil,
-                   encoding: JSONEncoding.default,
-                   headers: nil)
+    private init(){}
+    
+    func fetchAllCharacters(completion: @escaping (APIResult<AllCharactersDataModel>) -> Void) {
+        AF.request("https://rickandmortyapi.com/api/character")
             .validate()
-            .responseDecodable(of: [SingleCharactersDataModel].self) { response in
+            .responseJSON { response in
                 switch response.result {
                 case .success(let data):
-                    completion(.success(data))
+                    if let jsonData = try? JSONSerialization.data(withJSONObject: data),
+                       let charactersDataModel = try? JSONDecoder().decode(AllCharactersDataModel.self, from: jsonData) {
+                        completion(.success(charactersDataModel))
+                    } else {
+                        completion(.failure(.invalidData))
+                    }
                 case .failure(let error):
-                    // Handle the request failure
                     let dataError = DataError.network(error)
                     completion(.failure(dataError))
                     print("Alamofire request error: \(error)")

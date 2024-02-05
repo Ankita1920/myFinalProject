@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class CharacterViewController: UIViewController {
 
@@ -23,31 +24,49 @@ class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Character "
+                
+       // mytable.isHidden = true
+       //  myCollection.isHidden = false
        
-              characterViewModel.fetchCharacters {
-                  DispatchQueue.main.async {
-                      self.mytable.reloadData()
-                      self.myCollection.reloadData()
-                  }
-              }
-          
-    }
+      
+    
+         characterViewModel.fetchCharacters { result in
+             switch result {
+             case .success:
+                 DispatchQueue.main.async {
+                     self.mytable.reloadData()
+                     self.myCollection.reloadData()
+                 }
+             case .failure(let error):
+                 print("Failed to fetch characters: \(error)")
+             }
+         }
+     }
     
     
+    
+    
+  
     
     @IBAction func toggleButtonPressed(_ sender: UIButton) {
-        // Toggle between UITableView and UICollectionView
+       // toggleButton.isUserInteractionEnabled = true
+        
         isTableViewMode.toggle()
 
-        // Reload the corresponding view
+  
         if isTableViewMode {
             mytable.isHidden = false
             myCollection.isHidden = true
+           
+
         } else {
             mytable.isHidden = true
             myCollection.isHidden = false
+           
         }
     }
+   
 
     
     
@@ -61,34 +80,75 @@ extension CharacterViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = mytable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //  cell?.CharacterName.text =
-        return cell
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! myTableViewCell
+       
+        guard indexPath.row < characterViewModel.characters.count else {
+            return cell
+            
+        }
+        let character = characterViewModel.characters[indexPath.row]
+        cell.CharacterName.text = character.name
+        cell.CharacterStatus.text = character.status
         
+        if let url = URL(string: character.image) {
+            cell.characterImage.af.setImage(withURL:url)
+        }
+        
+        
+        
+        return cell
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+          self.navigationController?.pushViewController(vc, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            let character = characterViewModel.characters[indexPath.row]
+            vc.characterDetails = character
+       // self.navigationController?.pushViewController(vc, animated: true)
+           
+//            vc.DetailImage.image = UIImage(named: character.image)
+//            
+           //present(vc, animated: true)
+            }
+            
+        }
     }
-}
+
     
     
     
 extension CharacterViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return characterViewModel.characters.count
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return characterViewModel.characters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCollectionViewCell
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! myCollectionViewCell
+        
+        let character = characterViewModel.characters[indexPath.row]
+           cell.characterName2.text = character.name
+        cell.characterStatus.text = character.status
+        if let url = URL(string: character.image) {
+                  cell.collectionImage.af.setImage(withURL: url)
+              }
+
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+           // self.navigationController?.pushViewController(vc, animated: true)
+            let character = characterViewModel.characters[indexPath.row]
+          
+            vc.characterDetails = character
+        self.navigationController?.pushViewController(vc, animated: true)
+            collectionView.deselectItem(at: indexPath, animated: true)
             
-            // Assuming you have a property called "name" in your SingleCharactersDataModel
-            cell.characterName2.text = characterViewModel.characters[indexPath.row].name
-            
-            return cell
+           // present(vc, animated: true)
         }
     }
 
+}

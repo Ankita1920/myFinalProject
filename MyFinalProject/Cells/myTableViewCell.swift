@@ -11,7 +11,7 @@ class myTableViewCell: UITableViewCell {
     
     
     
-    @IBOutlet weak var CharacterImage: UIImageView!
+    @IBOutlet weak var characterImage: UIImageView!
     
     @IBOutlet weak var CharacterName: UILabel!
     

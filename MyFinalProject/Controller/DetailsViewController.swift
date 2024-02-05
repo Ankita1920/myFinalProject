@@ -13,13 +13,14 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var DetailImage: UIImageView!
     
+    
     @IBOutlet weak var statusValue: UILabel!
     
     @IBOutlet weak var status: UILabel!
     
-    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var GenderName: UILabel!
     
-    @IBOutlet weak var typevalue: UILabel!
+    @IBOutlet weak var Typevalue: UILabel!
     
     @IBOutlet weak var type: UILabel!
     
@@ -31,14 +32,30 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var genderValue: UILabel!
     
+    var characterDetails : Character?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    func setupUI() {
+        if let characterDetails = characterDetails {
+            // Example: Populate your UI elements
+            statusValue.text = characterDetails.status
+            GenderName.text = characterDetails.gender
+            Typevalue.text = characterDetails.type
+            species.text = characterDetails.species
+          
+            
+            
+            if let imageUrl = URL(string: characterDetails.image) {
+                            // Download and set the image using AlamofireImage
+                            DetailImage.af.setImage(withURL: imageUrl)
+                        }
+            
+        }
         
     }
+    
+    
     
 }

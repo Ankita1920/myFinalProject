@@ -3,19 +3,19 @@
 //  Ricky and Morty project
 //
 //  Created by Ankita Mondal on 01/02/24.
-//
 import Foundation
 
 class CharacterViewModel {
-    var characters: [SingleCharactersDataModel] = []
+    var characters: [Character] = [] 
 
-    func fetchCharacters(completion: @escaping () -> Void) {
-        APIManager.shared.fetchSingleCharacterData { [weak self] result in
+    func fetchCharacters(completion: @escaping (Swift.Result<[Character], Error>) -> Void) {
+        APIManager.shared.fetchAllCharacters { [weak self] result in
             switch result {
-            case .success(let characters):
-                self?.characters = characters
-                completion()
+            case .success(let allCharactersData):
+                self?.characters = allCharactersData.results
+                completion(.success(allCharactersData.results))
             case .failure(let error):
+                completion(.failure(error))
                 print("Failed to fetch characters: \(error)")
             }
         }
