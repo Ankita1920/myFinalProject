@@ -66,10 +66,6 @@ class CharacterViewController: UIViewController {
            
         }
     }
-   
-
-    
-    
 }
 
 extension CharacterViewController: UITableViewDelegate,UITableViewDataSource{

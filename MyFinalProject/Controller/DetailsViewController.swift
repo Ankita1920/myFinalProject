@@ -42,7 +42,7 @@ class DetailsViewController: UIViewController {
             // Example: Populate your UI elements
             statusValue.text = characterDetails.status
             GenderName.text = characterDetails.gender
-            Typevalue.text = characterDetails.type
+            Typevalue.text = "None"
             species.text = characterDetails.species
           
             
