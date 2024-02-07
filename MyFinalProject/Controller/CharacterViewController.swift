@@ -24,23 +24,21 @@ class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Character "
-                
+        title = "Character"
        // mytable.isHidden = true
        //  myCollection.isHidden = false
        
-      
-    
-         characterViewModel.fetchCharacters { result in
-             switch result {
-             case .success:
-                 DispatchQueue.main.async {
-                     self.mytable.reloadData()
-                     self.myCollection.reloadData()
-                 }
-             case .failure(let error):
-                 print("Failed to fetch characters: \(error)")
+      characterViewModel.fetchCharacters { result in
+         switch result {
+         case .success:
+             OperationQueue.main.addOperation{
+            //DispatchQueue.main.async {
+                 self.mytable.reloadData()
+                 self.myCollection.reloadData()
              }
+         case .failure(let error):
+             print("Failed to fetch characters: \(error)")
+         }
          }
      }
     
@@ -58,8 +56,6 @@ class CharacterViewController: UIViewController {
         if isTableViewMode {
             mytable.isHidden = false
             myCollection.isHidden = true
-           
-
         } else {
             mytable.isHidden = true
             myCollection.isHidden = false
@@ -127,6 +123,9 @@ extension CharacterViewController: UICollectionViewDelegate, UICollectionViewDat
         let character = characterViewModel.characters[indexPath.row]
            cell.characterName2.text = character.name
         cell.characterStatus.text = character.status
+//        cell.collectionImage.layer.cornerRadius = 8
+//        cell.collectionImage.layer.masksToBounds = true
+//        
         if let url = URL(string: character.image) {
                   cell.collectionImage.af.setImage(withURL: url)
               }
