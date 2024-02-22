@@ -20,11 +20,21 @@
 		27B956FA2B6B9A9200CF9067 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B956F92B6B9A9200CF9067 /* CharacterViewController.swift */; };
 		27B957002B6B9AC500CF9067 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B956FF2B6B9AC500CF9067 /* DetailsViewController.swift */; };
 		27B957052B6B9CC200CF9067 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B957042B6B9CC200CF9067 /* ApiServices.swift */; };
+<<<<<<< Updated upstream
 		27B957092B6B9CEE00CF9067 /* AllCharactersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B957072B6B9CEE00CF9067 /* AllCharactersDataModel.swift */; };
 		27B9570A2B6B9CEE00CF9067 /* SingleCharactersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B957082B6B9CEE00CF9067 /* SingleCharactersDataModel.swift */; };
 		27B9570D2B6B9D1F00CF9067 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9570C2B6B9D1F00CF9067 /* CharacterViewModel.swift */; };
 		27B9570F2B6B9D4200CF9067 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B9570E2B6B9D4200CF9067 /* Main.storyboard */; };
 		30F16B21CA6FD42CAEF5C175 /* libPods-MyFinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6493142CC0505944B0FE280 /* libPods-MyFinalProject.a */; };
+=======
+		27DDD6132B79DFC1006986DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DDD6112B79DFC1006986DD /* Main.storyboard */; };
+		27DDD6152B79DFF3006986DD /* AllCharactersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDD6142B79DFF3006986DD /* AllCharactersDataModel.swift */; };
+		27DDD6172B79DFFC006986DD /* SingleCharactersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDD6162B79DFFC006986DD /* SingleCharactersDataModel.swift */; };
+		27DDD6192B79E037006986DD /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDD6182B79E037006986DD /* CharacterViewModel.swift */; };
+		27E4A1CB2B7B3A7000403426 /* SaveDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4A1CA2B7B3A7000403426 /* SaveDataViewController.swift */; };
+		27E4A1CD2B7B3B3200403426 /* SaveDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4A1CC2B7B3B3200403426 /* SaveDataTableViewCell.swift */; };
+		670FD24198AC43C94C3C8FCE /* libPods-MyFinalProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD34B70870D59A284A0DD5F8 /* libPods-MyFinalProject.a */; };
+>>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +53,7 @@
 		27B956F92B6B9A9200CF9067 /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		27B956FF2B6B9AC500CF9067 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		27B957042B6B9CC200CF9067 /* ApiServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		27B957072B6B9CEE00CF9067 /* AllCharactersDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCharactersDataModel.swift; sourceTree = "<group>"; };
 		27B957082B6B9CEE00CF9067 /* SingleCharactersDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCharactersDataModel.swift; sourceTree = "<group>"; };
 		27B9570C2B6B9D1F00CF9067 /* CharacterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
@@ -50,6 +61,17 @@
 		5A7076BA429469769FEF8551 /* Pods-MyFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinalProject.release.xcconfig"; path = "Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		7F63C04018FD30EA60860E14 /* Pods-MyFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinalProject.debug.xcconfig"; path = "Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A6493142CC0505944B0FE280 /* libPods-MyFinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyFinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		27DDD6122B79DFC1006986DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27DDD6142B79DFF3006986DD /* AllCharactersDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllCharactersDataModel.swift; path = model/AllCharactersDataModel.swift; sourceTree = "<group>"; };
+		27DDD6162B79DFFC006986DD /* SingleCharactersDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleCharactersDataModel.swift; path = model/SingleCharactersDataModel.swift; sourceTree = "<group>"; };
+		27DDD6182B79E037006986DD /* CharacterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterViewModel.swift; path = MyFinalProject/viewModel/CharacterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		27E4A1CA2B7B3A7000403426 /* SaveDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataViewController.swift; sourceTree = "<group>"; };
+		27E4A1CC2B7B3B3200403426 /* SaveDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataTableViewCell.swift; sourceTree = "<group>"; };
+		3767ADB26418098C41EFE6A0 /* Pods-MyFinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinalProject.debug.xcconfig"; path = "Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		AD34B70870D59A284A0DD5F8 /* libPods-MyFinalProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyFinalProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8B183B0E10DA4FD0017338 /* Pods-MyFinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinalProject.release.xcconfig"; path = "Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject.release.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,26 +79,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30F16B21CA6FD42CAEF5C175 /* libPods-MyFinalProject.a in Frameworks */,
+				670FD24198AC43C94C3C8FCE /* libPods-MyFinalProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		082D35F319899EE3662CF0A2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A6493142CC0505944B0FE280 /* libPods-MyFinalProject.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		1D304F860422AED19D7AF4BF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7F63C04018FD30EA60860E14 /* Pods-MyFinalProject.debug.xcconfig */,
-				5A7076BA429469769FEF8551 /* Pods-MyFinalProject.release.xcconfig */,
+				3767ADB26418098C41EFE6A0 /* Pods-MyFinalProject.debug.xcconfig */,
+				AF8B183B0E10DA4FD0017338 /* Pods-MyFinalProject.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -87,7 +101,7 @@
 				27B956E42B6B998E00CF9067 /* MyFinalProject */,
 				27B956E32B6B998E00CF9067 /* Products */,
 				1D304F860422AED19D7AF4BF /* Pods */,
-				082D35F319899EE3662CF0A2 /* Frameworks */,
+				D5FF4BCCF5DED61AE164EA14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +179,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D5FF4BCCF5DED61AE164EA14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD34B70870D59A284A0DD5F8 /* libPods-MyFinalProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,12 +194,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B956F62B6B998F00CF9067 /* Build configuration list for PBXNativeTarget "MyFinalProject" */;
 			buildPhases = (
-				0BF7BD82989FA72B1A92845C /* [CP] Check Pods Manifest.lock */,
+				607E4FBB53708754795F804B /* [CP] Check Pods Manifest.lock */,
 				27B956DE2B6B998E00CF9067 /* Sources */,
 				27B956DF2B6B998E00CF9067 /* Frameworks */,
 				27B956E02B6B998E00CF9067 /* Resources */,
+<<<<<<< Updated upstream
 				5CBB54E7C064AFE384D106E5 /* [CP] Copy Pods Resources */,
 				9CA37266D674A48D1DDD189A /* [CP] Embed Pods Frameworks */,
+=======
+				A735B426E55FF3FD9D5FD8DB /* [CP] Embed Pods Frameworks */,
+				CD9F4A8CC272E8DE8FACC8F0 /* [CP] Copy Pods Resources */,
+>>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
@@ -235,7 +262,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BF7BD82989FA72B1A92845C /* [CP] Check Pods Manifest.lock */ = {
+		607E4FBB53708754795F804B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,7 +284,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+<<<<<<< Updated upstream
 		5CBB54E7C064AFE384D106E5 /* [CP] Copy Pods Resources */ = {
+=======
+		A735B426E55FF3FD9D5FD8DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinalProject/Pods-MyFinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD9F4A8CC272E8DE8FACC8F0 /* [CP] Copy Pods Resources */ = {
+>>>>>>> Stashed changes
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,7 +498,7 @@
 		};
 		27B956F72B6B998F00CF9067 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F63C04018FD30EA60860E14 /* Pods-MyFinalProject.debug.xcconfig */;
+			baseConfigurationReference = 3767ADB26418098C41EFE6A0 /* Pods-MyFinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,7 +528,7 @@
 		};
 		27B956F82B6B998F00CF9067 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A7076BA429469769FEF8551 /* Pods-MyFinalProject.release.xcconfig */;
+			baseConfigurationReference = AF8B183B0E10DA4FD0017338 /* Pods-MyFinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
