@@ -1,5 +1,5 @@
 //
-//  myTableViewCell.swift
+//  SaveDataTableViewCell.swift
 //  MyFinalProject
 //
 //  Created by Ankita Mondal on 22/02/24.
@@ -7,17 +7,21 @@
 
 import UIKit
 
-class myTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var characterImage: UIImageView!
-    
-    
-    @IBOutlet weak var CharacterName: UILabel!
-    
-    @IBOutlet weak var CharacterStatus: UILabel!
-    
-    
+class SaveDataTableViewCell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var Name: UILabel!
+    
+    @IBOutlet weak var Status: UILabel!
+    
+    
+    @IBOutlet weak var Gender: UILabel!
+    
+    @IBOutlet weak var Species: UILabel!
+    
+    @IBOutlet weak var `Type`: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
